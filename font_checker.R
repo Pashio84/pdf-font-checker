@@ -1,7 +1,6 @@
 library(stringr)
 
 checkDir <- commandArgs(trailingOnly = T)[1]
-# checkDir <- "/run/user/1000/gvfs/smb-share:server=eggplant,share=assist,user=assist/work_files/庶務/卒研梗概集/2019/梗概集/矢島研"
 setwd(checkDir)
 fileNames <- list.files()
 fileNames <- fileNames[!dir.exists(fileNames)][grep(".*\\.pdf", fileNames)]
